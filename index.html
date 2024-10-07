@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="sing"></p>
+
+    <button onclick="bottleSong()"> Dance</button>
+
+
+<script>
+
+    
+    function bottleSong() {
+
+        var bottle = 99;
+    
+        var song = " ";
+
+        while(bottle > 0) {
+
+            var firstLine1 =  bottle + " " + (bottle > 1 ? "bottles" : "bottle") + " of beer on the wall, " ;
+            var firstLine2 =  bottle + " " + (bottle > 1 ? "bottles" : "bottle") + " of beer , " ;
+            var secondLine1 = "Take one down, pass it round ";
+            var secondLine2 = (bottle - 1) + " " + ((bottle - 1) !== 1 ? "bottles" : "bottle") + " of beer on the wall.";
+
+
+            song += firstLine1 + firstLine2 + secondLine1 + secondLine2 + "<br>"
+            bottle--;
+       }
+
+
+       document.getElementById("sing").innerHTML = song;
+
+   
+}
+
+
+
+
+</script>
+</body>
+</html>
